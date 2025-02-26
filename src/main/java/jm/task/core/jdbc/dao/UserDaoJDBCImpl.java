@@ -10,7 +10,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     public UserDaoJDBCImpl() {}
 
-    Connection connection = Util.connect();
+    public Connection connection = Util.connect();
 
     public void createUsersTable() {
         String sqlCreate = "CREATE TABLE IF NOT EXISTS db1.users (" +
