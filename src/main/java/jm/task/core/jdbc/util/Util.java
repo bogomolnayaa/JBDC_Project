@@ -18,10 +18,10 @@ public class Util {
         return connection;
     }
 
-    public static void closeConnection() {
-        if (connect() != null) {
+    public static void closeConnection(Connection connection) {
+        if (connection != null) {
            try {
-               connect().close();
+               connection.close();
            } catch (SQLException e) {
                e.printStackTrace();
            }
